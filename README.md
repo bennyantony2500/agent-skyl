@@ -74,9 +74,4 @@ Tools exposed:
 | `get_work_orders` | Fetch all work orders from Monday.com with optional sector/status filters |
 | `get_deals` | Fetch all pipeline deals with optional sector/status/stage filters |
 
-## No MCP Library Needed
 
-This uses a **hand-rolled MCP implementation** (pure Python, stdlib only) instead of the `mcp` pip package. This means:
-- No extra dependency
-- Works with any Python 3.10+
-- Fully transparent — you can read every line of the protocol
