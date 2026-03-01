@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: monday-bi-agent
+    runtime: python
+    rootDir: back
+    buildCommand: pip install -r ../requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: MONDAY_API_KEY
+        sync: false
+      - key: WORK_ORDERS_BOARD_ID
+        sync: false
+      - key: DEALS_BOARD_ID
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
